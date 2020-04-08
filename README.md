@@ -1,4 +1,4 @@
-RotorS
+RotorS and AION R1 Rover Swarm
 ===============
 
 RotorS is a MAV gazebo simulator.
