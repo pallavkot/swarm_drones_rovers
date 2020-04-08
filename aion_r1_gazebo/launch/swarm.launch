@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+	<group ns="rover1">
+		<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+			<arg name="name" value="rover1" />
+			<arg name="tf_prefix" value="rover1" />
+			<arg name="y" value="-1.0" />
+		</include>
+	</group>
+
+	<group ns="rover2">
+		<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+			<arg name="name" value="rover2" />
+			<arg name="tf_prefix" value="rover2" />
+			<arg name="y" value="1.0" />
+		</include>
+	</group>
+
+	<group ns="rover3">
+		<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+			<arg name="name" value="rover3" />
+			<arg name="tf_prefix" value="rover3" />
+			<arg name="y" value="3.0" />
+		</include>
+	</group>
+</launch>

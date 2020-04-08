@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+
+<launch>
+	<include file="$(find rotors_gazebo)/launch/firefly_city_world.launch">
+	</include>
+
+	<!-- Drone 1 spawning instructions -->
+  	<group ns="drone1">		
+    	<include file="$(find rotors_gazebo)/launch/spawn_firefly.launch">
+      		<!-- <arg name="model" value="$(find rotors_description)/urdf/firefly_generic_pose_sensor.gazebo" /> -->
+      		<arg name="name" value="drone1" />
+      		<arg name="tf_prefix" value="drone1" />
+      		<arg name="x" value="0.0" />
+      		<arg name="y" value="0.0" />
+      	</include>
+  	</group>
+
+  	<!-- Drone 2 -->
+	<group ns="drone2">
+    	<include file="$(find rotors_gazebo)/launch/spawn_firefly.launch">
+      		<!-- <arg name="model" value="$(find rotors_description)/urdf/firefly_generic_pose_sensor.gazebo" /> -->
+      		<arg name="name" value="drone2" />
+      		<arg name="tf_prefix" value="drone2" />
+      		<arg name="x" value="0.0" />
+      		<arg name="y" value="1.0" /> 
+    	</include>
+  	</group>
+
+  	<!-- Drone 3 -->
+    <group ns="drone3">
+    	<include file="$(find rotors_gazebo)/launch/spawn_firefly.launch">
+      		<!-- <arg name="model" value="$(find rotors_description)/urdf/firefly_generic_pose_sensor.gazebo" /> -->
+      		<arg name="name" value="drone3" />
+      		<arg name="tf_prefix" value="drone3" />
+      		<arg name="x" value="0.0" />
+      		<arg name="y" value="-1.0" /> 
+    	</include>
+  	</group>
+
+  	<!-- Drone 4 -->
+  	<group ns="drone4">
+    	<include file="$(find rotors_gazebo)/launch/spawn_firefly.launch">
+      		<!-- <arg name="model" value="$(find rotors_description)/urdf/firefly_generic_pose_sensor.gazebo" /> -->
+      		<arg name="name" value="drone4" />
+      		<arg name="tf_prefix" value="drone4" />
+      		<arg name="x" value="1.0" />
+      		<arg name="y" value="0.0" /> 
+    	</include>
+  	</group>
+
+  	<!-- Drone 5 -->
+  	<group ns="drone5">
+    	<include file="$(find rotors_gazebo)/launch/spawn_firefly.launch">
+      		<!-- <arg name="model" value="$(find rotors_description)/urdf/firefly_generic_pose_sensor.gazebo" /> -->
+      		<arg name="name" value="drone5" />
+      		<arg name="tf_prefix" value="drone5" />
+      		<arg name="x" value="1.0" />
+      		<arg name="y" value="1.0" /> 
+    	</include>
+  	</group>
+  	
+	<!-- Drone 6 -->
+  	<group ns="drone6">
+    	<include file="$(find rotors_gazebo)/launch/spawn_firefly.launch">
+      		<!-- <arg name="model" value="$(find rotors_description)/urdf/firefly_generic_pose_sensor.gazebo" /> -->
+      		<arg name="name" value="drone6" />
+      		<arg name="tf_prefix" value="drone6" />
+      		<arg name="x" value="1.0" />
+      		<arg name="y" value="-1.0" /> 
+    	</include>
+  	</group>
+  	
+  	<!-- Drone 7 -->
+  	<group ns="drone7">
+    	<include file="$(find rotors_gazebo)/launch/spawn_firefly.launch">
+      		<!-- <arg name="model" value="$(find rotors_description)/urdf/firefly_generic_pose_sensor.gazebo" /> -->
+      		<arg name="name" value="drone7" />
+      		<arg name="tf_prefix" value="drone7" />
+      		<arg name="x" value="-1.0" />
+      		<arg name="y" value="0.0" /> 
+    	</include>
+  	</group>
+  	
+  	<!-- Drone 8 -->
+  	<group ns="drone8">
+    	<include file="$(find rotors_gazebo)/launch/spawn_firefly.launch">
+      		<arg name="name" value="drone8" />
+      		<arg name="tf_prefix" value="drone8" />
+      		<arg name="x" value="-1.0" />
+      		<arg name="y" value="1.0" /> 
+    	</include>
+  	</group>
+  	  	
+  	<!-- Drone 9 -->
+  	<group ns="drone9">
+    	<include file="$(find rotors_gazebo)/launch/spawn_firefly.launch">
+      		<!-- <arg name="model" value="$(find rotors_description)/urdf/firefly_generic_pose_sensor.gazebo" /> -->
+      		<arg name="name" value="drone9" />
+      		<arg name="tf_prefix" value="drone9" />
+      		<arg name="x" value="-1.0" />
+      		<arg name="y" value="-1.0" /> 
+    	</include>
+  	</group>
+
+  	<!-- Rover 1 -->
+  	<group ns="rover1">
+    	<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+      		<arg name="name" value="rover1" />
+      		<arg name="tf_prefix" value="rover1" />
+      		<arg name="x" value="0.0" />
+      		<arg name="y" value="2.0" />
+      		<arg name="z" value="0.1" /> 
+    	</include>
+  	</group>
+
+  	<!-- Rover 2 -->
+    <group ns="rover2">
+    	<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+      		<arg name="name" value="rover2" />
+      		<arg name="tf_prefix" value="rover2" />
+      		<arg name="x" value="1.0" />
+      		<arg name="y" value="2.0" />
+      		<arg name="z" value="0.1" /> 
+    	</include>
+  	</group>
+
+  	<!-- Rover 3 -->
+  	<group ns="rover3">
+    	<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+      		<arg name="name" value="rover3" />
+      		<arg name="tf_prefix" value="rover3" />
+      		<arg name="x" value="-1.0" />
+      		<arg name="y" value="2.0" />
+      		<arg name="z" value="0.1" /> 
+    	</include>
+  	</group>
+
+  	<!-- Rover 4 -->
+  	<group ns="rover4">
+    	<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+      		<arg name="name" value="rover4" />
+      		<arg name="tf_prefix" value="rover4" />
+      		<arg name="x" value="0.0" />
+      		<arg name="y" value="3.0" />
+      		<arg name="z" value="0.1" /> 
+    	</include>
+  	</group>
+
+  	<!-- Rover 5 -->
+  	<group ns="rover5">
+    	<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+      		<arg name="name" value="rover5" />
+      		<arg name="tf_prefix" value="rover5" />
+      		<arg name="x" value="1.0" />
+      		<arg name="y" value="3.0" />
+      		<arg name="z" value="0.1" /> 
+    	</include>
+  	</group>
+
+  	<!-- Rover 6 -->
+  	<group ns="rover6">
+    	<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+      		<arg name="name" value="rover6" />
+      		<arg name="tf_prefix" value="rover6" />
+      		<arg name="x" value="-1.0" />
+      		<arg name="y" value="3.0" />
+      		<arg name="z" value="0.1" /> 
+    	</include>
+  	</group>
+  	
+  	<!-- Rover 7 -->
+  	<group ns="rover7">
+    	<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+      		<arg name="name" value="rover7" />
+      		<arg name="tf_prefix" value="rover7" />
+      		<arg name="x" value="0.0" />
+      		<arg name="y" value="4.0" />
+      		<arg name="z" value="0.1" /> 
+    	</include>
+  	</group>
+
+  	<!-- Rover 8 -->
+  	<group ns="rover8">
+    	<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+      		<arg name="name" value="rover8" />
+      		<arg name="tf_prefix" value="rover8" />
+      		<arg name="x" value="1.0" />
+      		<arg name="y" value="4.0" />
+      		<arg name="z" value="0.1" /> 
+    	</include>
+  	</group>
+
+  	<!-- Rover 9 -->
+  	  	<group ns="rover9">
+    	<include file="$(find aion_r1_gazebo)/launch/gazebo.launch">
+      		<arg name="name" value="rover9" />
+      		<arg name="tf_prefix" value="rover9" />
+      		<arg name="x" value="-1.0" />
+      		<arg name="y" value="4.0" />
+      		<arg name="z" value="0.1" /> 
+    	</include>
+  	</group>
+</launch>
