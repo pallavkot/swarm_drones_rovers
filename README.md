@@ -44,21 +44,11 @@ Installation Instructions
 Basic Usage
 -----------
 
-Launch the simulator with a hex-rotor helicopter model, in our case, the AscTec Firefly.
+Launch the simulator for the swarm consisting 9 rovers and 9 hex-rotor helicopter model, in our case, the AscTec Firefly.
 
 ```
-$ roslaunch rotors_gazebo mav_empty_world.launch mav_name:=firefly
+$ roslaunch rotors_gazebo testswarm.launch
 ```
-
-> **Note** The first run of gazebo might take considerably long, as it will download some models from an online database.
-
-The simulator starts by default in paused mode. To start it you can either
- - use the Gazebo GUI and press the play button
- - or you can send the following service call.
-
-   ```
-   $ rosservice call gazebo/unpause_physics
-   ```
 
 There are some basic launch files where you can load the different multicopters with additional sensors. They can all be found in `~/catkin_ws/src/rotors_simulator/rotors_gazebo/launch`.
 
