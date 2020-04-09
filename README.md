@@ -23,6 +23,8 @@ Installation Instructions
  $ git clone git@github.com:ethz-asl/mav_comm.git
  $ git clone git@github.com:ethz-asl/glog_catkin.git
  $ git clone git@github.com:catkin/catkin_simple.git
+ $ git clone https://github.com/aionrobotics/aion_r1_description.git
+ $ git clone https://github.com/aionrobotics/aion_r1_gazebo.git
  ```
  4. Build your workspace with `python_catkin_tools` (therefore you need `python_catkin_tools`)
 
