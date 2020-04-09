@@ -17,12 +17,13 @@ Installation Instructions
  2. If you don't have ROS workspace yet you can do so.
  
  3. clone the following files from RotorS and AION robotics into your workspace:
+ ```
  $ cd ~/catkin_ws/src
  $ git clone git@github.com:ethz-asl/rotors_simulator.git
  $ git clone git@github.com:ethz-asl/mav_comm.git
  $ git clone git@github.com:ethz-asl/glog_catkin.git
  $ git clone git@github.com:catkin/catkin_simple.git
- 
+ ```
  4. Build your workspace with `python_catkin_tools` (therefore you need `python_catkin_tools`)
 
    ```
