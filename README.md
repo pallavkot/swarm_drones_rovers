@@ -12,39 +12,17 @@ This packages also contains some example controllers, basic worlds, a joystick i
 Installation Instructions
 -------------------------
 
- 1. Install and initialize ROS indigo desktop full, additional ROS packages, catkin-tools, and wstool:
-
- ```
- $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" > /etc/apt/sources.list.d/ros-latest.list'
- $ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
- $ sudo apt-get update
- $ sudo apt-get install ros-indigo-desktop-full ros-indigo-joy ros-indigo-octomap-ros python-wstool python-catkin-tools
- $ sudo rosdep init
- $ rosdep update
- $ source /opt/ros/indigo/setup.bash
- ```
- 2. If you don't have ROS workspace yet you can do so by
-
- ```
- $ mkdir -p ~/catkin_ws/src
- $ cd ~/catkin_ws/src
- $ catkin_init_workspace  # initialize your catkin workspace
- $ wstool init
- ```
- > **Note** for setups with multiple workspaces please refer to the official documentation at http://docs.ros.org/independent/api/rosinstall/html/ by replacing `rosws` by `wstool`.
- 3. Get the simulator and additional dependencies
-
- ```
+ 1. Install and initialize ROS melodic desktop full, additional ROS packages, catkin-tools, and wstool:
+ 
+ 2. If you don't have ROS workspace yet you can do so.
+ 
+ 3. clone the following files from RotorS and AION robotics into your workspace:
  $ cd ~/catkin_ws/src
  $ git clone git@github.com:ethz-asl/rotors_simulator.git
  $ git clone git@github.com:ethz-asl/mav_comm.git
  $ git clone git@github.com:ethz-asl/glog_catkin.git
  $ git clone git@github.com:catkin/catkin_simple.git
- ```
-  > **Note** if you want to use `wstool` you can replace the above commands with
-    ```
-    wstool set --git local_repo_name git@github.com:organization/repo_name.git
-    ```
+ 
  4. Build your workspace with `python_catkin_tools` (therefore you need `python_catkin_tools`)
 
    ```
@@ -109,11 +87,3 @@ You can let the helicopter hover with ground truth odometry (perfect state estim
 ```
 $ roslaunch rotors_gazebo firefly_hovering_example.launch mav_name:=firefly
 ```
-
-#### Create an attitude controller
-
-**TODO(ff):** `Write something here.`
-
-#### Usage with a joystick
-
-**TODO(ff):** `Write something here.`
